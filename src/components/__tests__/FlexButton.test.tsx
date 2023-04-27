@@ -8,7 +8,7 @@ import '@testing-library/jest-dom';
 const contentWithoutJsx : ContentType = "my content";
 const contentWithJsx : ContentType = <div>button</div>
 const disabledElementTestId = "disbaledElement"
-const disabledElement = <div data-testid={disabledElementTestId}>disabled</div>
+const disabledOverlayElement = <div data-testid={disabledElementTestId}>disabled</div>
 const containerStyle = {position : "relative"}
 const containerClassName = "container"
 const buttonClassName = "button"
@@ -76,19 +76,19 @@ describe("render test",()=>{
             expect(button).toBeDisabled();
         })
     })
-    describe("test if disabledElement renders",()=>{
-        test("check if disabledElement doesn't renders",()=>{
+    describe("test if disabledOverlayElement renders",()=>{
+        test("check if disabledOverlayElement doesn't renders",()=>{
             container = render(<FlexButton content={contentWithoutJsx}/>).container;
             expect(container.children[0].children).toHaveLength(1);
             const button = getByRole(container,"button");
             expect(button).not.toBeDisabled();
         })
-        test("check if disabledElement renders",()=>{
-            container = render(<FlexButton content={contentWithoutJsx} disabledElement={disabledElement}/>).container;
+        test("check if disabledOverlayElement renders",()=>{
+            container = render(<FlexButton content={contentWithoutJsx} disabledOverlayElement={disabledOverlayElement}/>).container;
             const button = getByRole(container,"button");
             expect(button).toBeDisabled();
             expect(container.children[0].children[1]).toHaveAttribute("data-testid",disabledElementTestId);
-            expect(container.children[0].children[1]).toHaveTextContent(getTextContentOfALabel(disabledElement));
+            expect(container.children[0].children[1]).toHaveTextContent(getTextContentOfALabel(disabledOverlayElement));
         })
     })
     test("text if jsx content render correctly",()=>{
@@ -116,11 +116,11 @@ describe("test click events",()=>{
         button.click();
         expect(click.mock.results).toHaveLength(0);    
     })
-    test("check if doesn't click when disabledElement",()=>{
+    test("check if doesn't click when disabledOverlayElement",()=>{
         let click = jest.fn(()=>{
             return "clicked";
         });
-        let container = render(<FlexButton content={contentWithoutJsx} disabledElement={disabledElement} buttonProps={{onClick : click}}/>).container;
+        let container = render(<FlexButton content={contentWithoutJsx} disabledOverlayElement={disabledOverlayElement} buttonProps={{onClick : click}}/>).container;
         const button = getByRole(container,"button");
         button.click();
         expect(click.mock.results).toHaveLength(0);    
