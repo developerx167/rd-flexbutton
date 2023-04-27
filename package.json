@@ -19,6 +19,10 @@
     "ui",
     "frontend"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developerx167/rd-flexbutton.git"
+  },
   "author": "devx167",
   "license": "MIT",
   "devDependencies": {
