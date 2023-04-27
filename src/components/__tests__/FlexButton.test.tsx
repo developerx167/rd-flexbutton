@@ -10,7 +10,7 @@ const contentWithJsx : ContentType = <div>button</div>
 const disabledElementTestId = "disbaledElement"
 const disabledElement = <div data-testid={disabledElementTestId}>disabled</div>
 const containerStyle = {position : "relative"}
-const conatinerClassName = "container"
+const containerClassName = "container"
 const buttonClassName = "button"
 const buttonId = "buttonId"
 
@@ -44,7 +44,7 @@ describe("render test",()=>{
             container = render(<FlexButton content={contentWithoutJsx}/>).container;
         })
         test("conatiner should not have className",()=>{
-            expect(container.children[0]).not.toHaveClass(conatinerClassName);
+            expect(container.children[0]).not.toHaveClass(containerClassName);
         })
         test("button should not have className",()=>{
             expect(container.children[0].children[0]).not.toHaveClass(buttonClassName);
@@ -53,10 +53,10 @@ describe("render test",()=>{
     describe("test with classNames",()=>{
         let container : HTMLElement;
         beforeEach(()=>{
-            container = render(<FlexButton content={contentWithoutJsx} conatinerClassName={conatinerClassName} buttonProps={{className : buttonClassName}}/>).container;
+            container = render(<FlexButton content={contentWithoutJsx} containerClassName={containerClassName} buttonProps={{className : buttonClassName}}/>).container;
         })
         test("conatiner should not have className",()=>{
-            expect(container.children[0]).toHaveClass(conatinerClassName);
+            expect(container.children[0]).toHaveClass(containerClassName);
         })
         test("button should not have className",()=>{
             expect(container.children[0].children[0]).toHaveClass(buttonClassName);
