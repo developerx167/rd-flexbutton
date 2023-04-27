@@ -1,6 +1,6 @@
 {
   "name": "rd-flexbutton",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A flexible button component for React applications.",
   "main": "dist/rd-flexbutton.cjs.js",
   "module": "dist/rd-flexbutton.esm.js",
