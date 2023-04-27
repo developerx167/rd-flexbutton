@@ -19,7 +19,7 @@ Usage
 To use the Red FlexButton Component in your React application, simply import the component and pass in the required props:
 
 ```
-import { FlexButton } from 'rd-flexbutton'
+import FlexButton from 'rd-flexbutton'
 
 function MyComponent() { 
       return ( 
