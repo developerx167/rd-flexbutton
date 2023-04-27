@@ -30,7 +30,7 @@ function MyComponent() {
                         disabled : false,
                         className : "button"
                   }}
-                  <!-- disabledElement={<div>disabled</div>-->
+                  <!-- disabledOverlayElement={<div>disabled</div>-->
                   containerClassName='container'
                   />
             );
@@ -46,7 +46,7 @@ The FlexButton Component supports the following props:
     
 *   `buttonProps` (optional): It is the object of default HTML button attributes, such as `onClick`, `disabled`, and `className`. The type of this prop is `React.ButtonHTMLAttributes<HTMLButtonElement> | undefined`.
     
-*   `disabledElement` (optional): The element to be displayed when the button is disabled. If this prop is provided, the button is automatically considered as disabled.
+*   `disabledOverlayElement` (optional): The element to be displayed when the button is disabled. If this prop is provided, the button is automatically considered as disabled.
     
 *   `containerClassName` (optional): The class name for the container element of the button.
 
