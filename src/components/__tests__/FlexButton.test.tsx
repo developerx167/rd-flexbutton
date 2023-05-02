@@ -1,7 +1,7 @@
 import React from "react";
 import {getByRole, render} from "@testing-library/react"
-import FlexButton from "../FlexButton"
-import { ContentType } from "../type"
+import FlexButton from "../FlexButton/FlexButton"
+import { ContentType } from "../FlexButton/type"
 import { getTextContentOfALabel } from "./test-utils";
 import '@testing-library/jest-dom';
 
