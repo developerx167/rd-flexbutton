@@ -59,7 +59,7 @@ Contributions are welcome and appreciated! If you find any issues or have sugges
 License
 -------
 
-The FlexButton Component is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
+The FlexButton Component is open source and available under the [MIT License](https://github.com/developerx167/rd-flexbutton/blob/main/LICENSE).
 
 Thanks
 ------
