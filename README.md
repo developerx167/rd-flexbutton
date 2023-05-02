@@ -1,7 +1,7 @@
-FlexButton Component
+FlexButton - A Flexible and Unstyled Button Component for React
 ========================
 
-The FlexButton Component is a customizable and reusable button component for React applications. It can be easily integrated into any project, providing a flexible and user-friendly interface.
+FlexButton is a highly flexible and unstyled button component for React that allows you to create custom buttons with ease. With its simple design, FlexButton can adapt to various use cases and design needs, making it a perfect choice for any project that requires customizable buttons.
 
 Installation
 ------------
@@ -18,7 +18,7 @@ Usage
 
 To use the Red FlexButton Component in your React application, simply import the component and pass in the required props:
 
-```
+```js
 import FlexButton from 'rd-flexbutton'
 
 function MyComponent() { 
