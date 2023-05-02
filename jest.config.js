@@ -1,12 +1,13 @@
-module.exports = {
-  preset: 'ts-jest',
-  testMatch: ["**/__tests__/**/*.test.(ts|tsx)"],
+/** @type {import('jest').Config} */
+const config = {
+  preset : 'ts-jest',
+  testMatch : [
+    '**/*.test.tsx'
+  ],
   transform: {
-    '^.+\\.(test)\\.(ts|tsx)?$': 'ts-jest',
-    '^.+\\.(test)\\.(ts|tsx)?$': "babel-jest",
+    '^.+\\.(test)\\.(ts|tsx)$': 'ts-jest',
   },
   testEnvironment : "jsdom",
-  coveragePathIgnorePatterns: [
-    "test-utils.ts"
-  ]
 };
+
+module.exports = config;
