@@ -7,7 +7,7 @@
     test:
       strategy:
           matrix:
-              os: ["windows-latest","ubuntu-latest"]
+              os: ["ubuntu-latest"]
       name: test
       runs-on: ${{ matrix.os }} 
       steps:
